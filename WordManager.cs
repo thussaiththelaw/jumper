@@ -1,3 +1,10 @@
+/*
+WordManager class has most if not all of the funcionality discussed in class this morning. It will accept a word from the WordList class, and is accessed through the Compare method,
+which takes a character argument. 
+it requires the: init_active_word_array(), init_correct_array(); methods to be run before calling the Compare method. 
+the methods: display_correct_guesses() and print_wrong_guesses() print the word as it forms, and the wrong guesses as a string.
+The compare method also handles duplicate guesses. 
+*/
 namespace word
 {
     class WordManager
@@ -25,7 +32,7 @@ namespace word
         // or concantinates the letter to the incorrect guesses string
         {
             this.guess = guess;
-            if((!all_guesses.Contains(this.guess)) ) //&& (!correct_array_string.Contains(this.guess))
+            if(!all_guesses.Contains(this.guess)) //&& (!correct_array_string.Contains(this.guess))
             {
                 
                 for(int i = 0; i < active_word_length*2;i++)
@@ -41,7 +48,7 @@ namespace word
                     incorrect_guesses += this.guess + " ";
                 }          
             } 
-            else if(all_guesses.Contains(this.guess))
+            else if(all_guesses.Contains(this.guess)) // checks for duplicate guesses. prints applicable text 
             {
                 Console.WriteLine("You already guessed that. Guess again.");
             }  
@@ -49,9 +56,9 @@ namespace word
             all_guesses += this.guess;
         }
 
-        public string print_wrong_guesses() // getter returns the list of incorrect guesses
+        public void print_wrong_guesses() // getter returns the list of incorrect guesses
         {
-            return incorrect_guesses;
+            Console.WriteLine(incorrect_guesses);
         }
 
         public void display_correct_guesses()
