@@ -1,11 +1,14 @@
-namespace program{
+namespace jumper{
 
     class Director{
 
         private bool playing = true;
 
 
-        public void GameLoop(){
+
+        public Director(){}
+
+        public void StartGame(){
 
             while (playing){
                 GetInputs();
