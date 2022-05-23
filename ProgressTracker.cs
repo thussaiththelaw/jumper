@@ -11,33 +11,28 @@ namespace tracker{
 
         public ProgressTracker(){} //Constructor
 
-        public void RunChecks(){
 
-            CheckIfWon();
-            CheckIfLost();
-        }
 
-        private void CheckIfWon(){
+        public bool CheckIfWon(){
             // char my_thing = word.WordManager.
             // if ('_' !in my_thing){
             //won == True;
             //UpdateDisplay(something about calling the image handling probably)
 
             // } 
-
+            return true;
         }
 
-        private void CheckIfLost(){
+        public bool CheckIfLost(){
             if (FailCount >= 7){
-                lost = true;
-                //UpdateDisplay(something about calling image handling probably)
+                return true;
+            }
+            else{
+                return false;
             }
                        
         }
 
-        private void UpdateDisplay(){
-            //call terminal service to display win/loss/current guess
-        }
 
 
 
