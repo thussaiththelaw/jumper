@@ -10,6 +10,8 @@ namespace jumper{
 
         public void StartGame(){
 
+
+
             while (playing){
                 GetInputs();
                 DoUpdates();
@@ -19,6 +21,17 @@ namespace jumper{
 
         }
 
+        private void Initial(){
+            terminal.TerminalService terminal = new terminal.TerminalService();
+            word.WordManager WordManager = new word.WordManager();
+            tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
+            
+
+            int difficulty = terminal.difficulty();
+
+
+
+        }
         private void GetInputs(){
 
 
