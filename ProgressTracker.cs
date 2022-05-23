@@ -18,7 +18,8 @@ namespace tracker{
         }
 
         private void CheckIfWon(){
-            // if ('_' in WordManager.active_word_array){
+            // char my_thing = word.WordManager.
+            // if ('_' !in my_thing){
             //won == True;
             //UpdateDisplay(something about calling the image handling probably)
 
