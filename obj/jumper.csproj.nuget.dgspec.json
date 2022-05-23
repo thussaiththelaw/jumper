@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\toby3\\OneDrive\\Desktop\\school_spring_2022\\CSE 210\\Module 3\\jumper\\jumper.csproj": {}
+    "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\toby3\\OneDrive\\Desktop\\school_spring_2022\\CSE 210\\Module 3\\jumper\\jumper.csproj": {
+    "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\toby3\\OneDrive\\Desktop\\school_spring_2022\\CSE 210\\Module 3\\jumper\\jumper.csproj",
+        "projectUniqueName": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj",
         "projectName": "jumper",
-        "projectPath": "C:\\Users\\toby3\\OneDrive\\Desktop\\school_spring_2022\\CSE 210\\Module 3\\jumper\\jumper.csproj",
-        "packagesPath": "C:\\Users\\toby3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\toby3\\OneDrive\\Desktop\\school_spring_2022\\CSE 210\\Module 3\\jumper\\obj\\",
+        "projectPath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj",
+        "packagesPath": "C:\\Users\\tjleg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\toby3\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tjleg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

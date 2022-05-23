@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jXR5KS3+gOPIfN6PVfLCDKUc2wGBDbTlC/5vUgkSkUJ+busig8VyHDGfyJEcu840+RyU+brC/F+yhomuEgz/AA==",
+  "dgSpecHash": "U2vi2Z3ty9YfZQyklTDeHfJo2fGjqXfnqt+OtN7gCRMIF+yCyK+J6RerDZYQpabeFkkYP3w1FFmeLSM1nLpzRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\toby3\\OneDrive\\Desktop\\school_spring_2022\\CSE 210\\Module 3\\jumper\\jumper.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tjleg\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

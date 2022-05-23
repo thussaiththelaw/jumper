@@ -1,50 +1,66 @@
+using System;
+using Newtonsoft.Json.Linq;//dotnet add package Newtonsoft.json is used to add newtonsoft to out program.
+
 namespace word
 {
     class WordList
     {
         /*notes 
-        I am working to figure out how to use a json file in c# I currently have a file with over 300 words with room to grow.
-        If we don't want to usse a setter/getter for this we can just add difficulty to be in the getWord() function.
+        This Class is used to get a random word out of the WordList.json file. To do this we have a UpdateDifficulty function the will
+        take in a user input to set the difficulty. This input will need to be an int value. To prevent errors before this function is called
+        The Terminal Service function should take a user input string and convert it to an int, if no int is found runing the function 
+        will cause the difficulty to be set to level 1. 
+        Once we have the difficulty we can then use it as a token call for the Json doc JObject. This string needs to be  correlated to 
+        the tokens in the Json file WordList.json or else it will not work. Once we have our list of values that we want we get
+        a random location in the JsonArray. This will pull a random word from the file. Lastly we convert this into a string to return it 
+        to the WordManager Class to be converted into a list.
+
+        let me know if this is helpful.
         */
 
-        public WordList(){} // I am not sure what this does.
+       //public WordList(){} // I am not sure what this does. I did not add this - Tyler
 
-        private int difficulty = 1;
+       private string difficulty="";
 
-
-        public void JsonReader() //may need this class to be able to read a json file. If not it will be a .txt reader
-        {
-
+        public void UpdateDifficulty(int UpdateDiff=0)//This is a setter that will change the difficulty based on what int is passed into it.
+        {   
+            if (UpdateDiff==1)// UpdateDiff = 1 is difficulty level 2
+            {
+                this.difficulty = "DifficultyTwo";//These are the names of the tokens in the WordList.Json file
+            }
+            else if (UpdateDiff==2)//updateDiff = 2 is difficulty level 3
+            {
+                this.difficulty = "DifficultyThree";
+            }
+            else // the base difficulty is one. This will only change if UpdateDiff==1||UpdateDiff==2
+            {
+                this.difficulty = "DifficultyOne";
+            }
         }
 
-
-
-        public void SetDifficulty(int diff) //setter that gets a difficulty and stores it so that the game can pick a word of an appropriate length.
+        public string getWord()
         {
-            difficulty = diff;
-        }
 
-
-
-        public string getWord()//This can be changed to take in an int value for difficulty.
-        {
-            var random = new Random();
-            var list = new List<string>{ "red","blue","green","yellow"}; // selects random test word.
             
-            if (difficulty == 2) // if the user selects a different difficulty then these will be the lists it will draw from.
+            using (StreamReader r = new StreamReader("WordList.json") ) //opens the file and set the file equal to r, for read.
             {
-                list = new List<string>{"one","two"}; 
+
+                
+                string json = r.ReadToEnd(); //Read the WordList.json file and stoes it as the string json.
+
+                JObject doc = JObject.Parse(json); //parses through the json string to make the doc JObject. This allows us to go into the file and select what we need. 
+    
+                int ListLength = doc[difficulty].Count(); // takes the  ListLength of the list of the current difficulty.
+                
+                Random random = new Random(); // initializes the random condition
+                int RandomLocation = random.Next(ListLength);//takes ListLength of the difficulty string in the json and askes for a random int number in the list index. 
+                
+                var word = doc.SelectToken(difficulty).Value<JArray>()[RandomLocation];//Selecting the token of the json to be called then turns it into a JArray. We then use our random location to pull out a word.
+                // the var prefix sets it to what ever thing we need.
+                
+
+                return word.ToString();// converts the var word into a string and then returns it.  
             }
-            else if (difficulty == 3)
-            {
-                list = new List<string>{"bird","eagle"};
-            }
-
-            int index = random.Next(list.Count); // takes the length of the list and then reutrns an int 
-
-            string ReturnWord = list[index];// takes in that int to get an index in the list.
-
-            return ReturnWord; // returns the word to be used in the "jumper" game.
         }
     }
 }
