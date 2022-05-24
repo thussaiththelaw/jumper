@@ -1,4 +1,4 @@
-namespace tracker{
+namespace terminal{
     class ProgressTracker{
 
         //attributes
