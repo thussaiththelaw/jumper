@@ -1,4 +1,4 @@
-namespace terminal{
+namespace tracker{
     class ProgressTracker{
 
         //attributes
@@ -13,14 +13,15 @@ namespace terminal{
 
 
 
-        public bool CheckIfWon(char[] word_array){
-           for (int i = 0; i < lengthof(word_array); i++ ){
-               if (word_array[i] == '_'){
-                   return false;
-               }
+        public bool CheckIfWon(){
+            // char my_thing = word.WordManager.
+            // if ('_' !in my_thing){
+            //won == True;
+            //UpdateDisplay(something about calling the image handling probably)
+
+            // } 
             return true;
-           }}
-           
+        }
 
         public bool CheckIfLost(){
             if (FailCount >= 7){
@@ -28,7 +29,9 @@ namespace terminal{
             }
             else{
                 return false;
-            }}
+            }
+                       
+        }
 
 
 
