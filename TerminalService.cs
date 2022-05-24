@@ -2,10 +2,7 @@ namespace terminal
 {
     class TerminalService
     {
-        public TerminalService()
-        {
-            
-        }
+        public TerminalService(){}
 
 
         //get an input from the user to set the difficulty level for the game
