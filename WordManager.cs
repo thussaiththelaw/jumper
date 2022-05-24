@@ -1,4 +1,4 @@
-using Ter
+
 /*
 WordManager class has most if not all of the funcionality discussed in class this morning. It will accept a word from the WordList class, and is accessed through the Compare method,
 which takes a character argument. 
