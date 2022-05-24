@@ -15,8 +15,8 @@ namespace word
         private string all_guesses = "";
         private string correct_array_string = "";
         private int active_word_length;
-        char[] correct_array = new char[10]; // array starts at arbitrary length, will be resized to match active word
-        char[] active_word_array = new char[10];
+        private char[] correct_array = new char[10]; // array starts at arbitrary length, will be resized to match active word
+        private char[] active_word_array = new char[10];
         private char guess;
         
 
@@ -65,7 +65,10 @@ namespace word
         {
             Console.WriteLine(correct_array);
         }
-
+        public char[] get_correct_guesses()
+        {
+            return correct_array;
+        }
         public void init_active_word_array() // active word array holds the word that guesses will be compared to
         {
             Array.Resize(ref active_word_array, active_word_length*2);
