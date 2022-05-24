@@ -1,3 +1,4 @@
+using Ter
 /*
 WordManager class has most if not all of the funcionality discussed in class this morning. It will accept a word from the WordList class, and is accessed through the Compare method,
 which takes a character argument. 
@@ -13,6 +14,7 @@ namespace word
         private string word_to_guess = ""; // private string, the active word the game is to be played with.
         public string incorrect_guesses = "Wrong guesses: ";
         private string all_guesses = "";
+        private int difficulty;
         private string correct_array_string = "";
         private int active_word_length;
         char[] correct_array = new char[10]; // array starts at arbitrary length, will be resized to match active word
@@ -22,13 +24,14 @@ namespace word
         
 
         WordList active_word = new WordList(); // instantiates word list object
+       
         //word_to_guess = active_word.getWord();
         //active_word_length = word_to_guess.Length();
 
-        public WordManager()
+        public WordManager(int difficulty)
         {
-
-            word_to_guess = active_word.getWord();
+            this.difficulty = difficulty;
+            word_to_guess = active_word.getWord(this.difficulty);
             active_word_length = word_to_guess.Length;
         } // constructor
         public void Compare(char guess) // compares letter guesses to already guessed letters, and adds the correct letter to each spot that the letter exists,
