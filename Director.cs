@@ -22,27 +22,42 @@ namespace jumper{
         }
 
         private void Initial(){
-            terminal.TerminalService terminal = new terminal.TerminalService();
-            word.WordManager WordManager = new word.WordManager();
-            tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
+            // terminal.TerminalService terminal = new terminal.TerminalService();
+            // word.WordManager WordManager = new word.WordManager(difficulty);
+            // tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
             
 
             int difficulty = terminal.difficulty();
 
+            //get difficulty
+            //construct WM, PT, TS
+                //give difficulty to WM when constructing
+
+                //WM will construct Word list
+                //TS will construct pics
+            
 
 
         }
         private void GetInputs(){
-
+        //guess - TS
+        //
 
         }
 
         private void DoUpdates(){
-
-        }
+            //compare (is good or not)- WM
+            //right or wrong -> update fail counter - PT
+            //correct array - WM > PT
+            //check win/loss - PT
+            //
+        }  
 
         private void DoOutputs(){
-
+            //correct array - WM -> TS
+            //incorrect guesses - WM -> TS
+            //win/loss - TS (if its happened)
+            //wrong/right - TS
         }
 
 
