@@ -5,6 +5,9 @@ it requires the: init_active_word_array(), init_correct_array(); methods to be r
 the methods: display_correct_guesses() and print_wrong_guesses() print the word as it forms, and the wrong guesses as a string.
 The compare method also handles duplicate guesses. 
 */
+using terminal;
+
+
 namespace word
 {
     class WordManager
@@ -23,8 +26,10 @@ namespace word
         WordList active_word = new WordList(); // instantiates word list object
         //word_to_guess = active_word.getWord();
         //active_word_length = word_to_guess.Length();
+        TerminalService terminal = new TerminalService();
 
         public WordManager(){
+            active_word.UpdateDifficulty(terminal.difficulty());
             word_to_guess = active_word.getWord();
             active_word_length = word_to_guess.Length;
         } // constructor

@@ -24,7 +24,7 @@ namespace jumper{
         private void Initial(){
             terminal.TerminalService terminal = new terminal.TerminalService();
             word.WordManager WordManager = new word.WordManager();
-            tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
+            terminal.ProgressTracker PrograssTracker = new terminal.ProgressTracker();
             
 
             int difficulty = terminal.difficulty();

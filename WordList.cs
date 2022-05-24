@@ -20,7 +20,7 @@ namespace word
 
        //public WordList(){} // I am not sure what this does. I did not add this - Tyler
 
-       private string difficulty="";
+       private string difficulty="DifficultyOne";// the base difficulty is one. This will only change if UpdateDiff==1||UpdateDiff==2 in the UpdateDifficulty Function
 
         public void UpdateDifficulty(int UpdateDiff=0)//This is a setter that will change the difficulty based on what int is passed into it.
         {   
@@ -31,10 +31,6 @@ namespace word
             else if (UpdateDiff==2)//updateDiff = 2 is difficulty level 3
             {
                 this.difficulty = "DifficultyThree";
-            }
-            else // the base difficulty is one. This will only change if UpdateDiff==1||UpdateDiff==2
-            {
-                this.difficulty = "DifficultyOne";
             }
         }
 
@@ -50,13 +46,13 @@ namespace word
 
                 JObject doc = JObject.Parse(json); //parses through the json string to make the doc JObject. This allows us to go into the file and select what we need. 
     
-                int ListLength = doc[difficulty].Count(); // takes the  ListLength of the list of the current difficulty.
+                int ListLength = doc[this.difficulty].Count(); // takes the  ListLength of the list of the current difficulty.
                 
                 Random random = new Random(); // initializes the random condition
                 int RandomLocation = random.Next(ListLength);//takes ListLength of the difficulty string in the json and askes for a random int number in the list index. 
                 
-                var word = doc.SelectToken(difficulty).Value<JArray>()[RandomLocation];//Selecting the token of the json to be called then turns it into a JArray. We then use our random location to pull out a word.
-                // the var prefix sets it to what ever thing we need.
+                var word = doc.SelectToken(this.difficulty).Value<JArray>()[RandomLocation];//Selecting the token of the json to be called then turns it into a JArray. We then use our random location to pull out a word.
+                // the var prefix sets the input to what ever type we need.
                 
 
                 return word.ToString();// converts the var word into a string and then returns it.  
