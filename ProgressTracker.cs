@@ -13,15 +13,14 @@ namespace tracker{
 
 
 
-        public bool CheckIfWon(){
-            // char my_thing = word.WordManager.
-            // if ('_' !in my_thing){
-            //won == True;
-            //UpdateDisplay(something about calling the image handling probably)
-
-            // } 
+        public bool CheckIfWon(char[] word_array){
+           for (int i = 0; i < lengthof(word_array); i++ ){
+               if (word_array[i] == '_'){
+                   return false;
+               }
             return true;
-        }
+           }}
+           
 
         public bool CheckIfLost(){
             if (FailCount >= 7){
@@ -29,9 +28,7 @@ namespace tracker{
             }
             else{
                 return false;
-            }
-                       
-        }
+            }}
 
 
 
