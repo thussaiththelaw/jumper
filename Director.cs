@@ -31,6 +31,7 @@ namespace jumper{
             this.terminal = new terminal.TerminalService();
             int difficulty = terminal.difficulty();
             this.WordManager = new word.WordManager(difficulty);
+            //WordManager.
             this.ProgressTracker = new tracker.ProgressTracker();
             
 
