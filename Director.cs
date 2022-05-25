@@ -23,7 +23,7 @@ namespace jumper{
                 DoUpdates(this.guess);
                 DoOutputs();                
             }
-
+            terminal.print("Thanks for playing!");
 
         }
 
@@ -63,6 +63,9 @@ namespace jumper{
             if (ProgressTracker.CheckIfLost()){
                 this.lost = true;
             }
+            if (this.won || this.lost){
+                this.playing = false;
+            }
 
             //compare (is good or not)- WM
             //right or wrong -> update fail counter - PT
@@ -72,6 +75,19 @@ namespace jumper{
         }  
 
         private void DoOutputs(){
+            terminal.display_correct_guesses(WordManager.correct_array);
+            terminal.print_wrong_guesses(WordManager.incorrect_guesses);
+
+            if (this.won){
+                terminal.print_win();
+            }
+            else if (this.lost){
+                terminal.print_lose();
+            }
+            else{
+                //print current
+
+            }
             //correct array - WM -> TS
             //incorrect guesses - WM -> TS
             //win/loss - TS (if its happened)
