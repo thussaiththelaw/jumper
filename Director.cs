@@ -7,6 +7,8 @@ namespace jumper{
         terminal.TerminalService terminal;
         word.WordManager WordManager;
         tracker.ProgressTracker ProgressTracker;
+        bool won = false;
+        bool lost = false;
 
 
         public Director(){}
@@ -56,10 +58,10 @@ namespace jumper{
                 ProgressTracker.FailCount += 1;
             }
             if (ProgressTracker.CheckIfWon(WordManager.correct_array)){
-                //we won
+                this.won = true;
             }
             if (ProgressTracker.CheckIfLost()){
-                //we lost
+                this.lost = true;
             }
 
             //compare (is good or not)- WM
