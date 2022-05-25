@@ -7,6 +7,7 @@ namespace jumper{
 
 
         public Director(){}
+        public char guess;
 
         public void StartGame(){
 
@@ -39,6 +40,7 @@ namespace jumper{
 
         }
         private void GetInputs(){
+        guess = terminal.guess();
         //guess - TS
         //
 
