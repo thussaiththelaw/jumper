@@ -3,19 +3,22 @@ namespace jumper{
     class Director{
 
         private bool playing = true;
-
+        public char guess;
+        terminal.TerminalService terminal;
+        word.WordManager WordManager;
+        tracker.ProgressTracker ProgressTracker;
 
 
         public Director(){}
-        public char guess;
+
 
         public void StartGame(){
 
-
+            Initial();
 
             while (playing){
                 GetInputs();
-                DoUpdates();
+                DoUpdates(this.guess);
                 DoOutputs();                
             }
 
@@ -23,10 +26,10 @@ namespace jumper{
         }
 
         private void Initial(){
-            terminal.TerminalService terminal = new terminal.TerminalService();
-            int difficulty = terminal.difficulty()
-            word.WordManager WordManager = new word.WordManager(difficulty);
-            tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
+            this.terminal = new terminal.TerminalService();
+            int difficulty = terminal.difficulty();
+            this.WordManager = new word.WordManager(difficulty);
+            this.ProgressTracker = new tracker.ProgressTracker();
             
 
             //get difficulty
@@ -40,13 +43,25 @@ namespace jumper{
 
         }
         private void GetInputs(){
-        guess = terminal.guess();
+        this.guess = terminal.guess();
         //guess - TS
         //
 
         }
 
-        private void DoUpdates(){
+        private void DoUpdates(char guess){
+            WordManager.Compare(guess);
+            bool right_or_wrong = WordManager.correct_wrong;
+            if (!right_or_wrong){
+                ProgressTracker.FailCount += 1;
+            }
+            if (ProgressTracker.CheckIfWon(WordManager.correct_array)){
+                //we won
+            }
+            if (ProgressTracker.CheckIfLost()){
+                //we lost
+            }
+
             //compare (is good or not)- WM
             //right or wrong -> update fail counter - PT
             //correct array - WM > PT

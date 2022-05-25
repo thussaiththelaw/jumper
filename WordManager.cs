@@ -17,7 +17,7 @@ namespace word
         private int difficulty;
         private string correct_array_string = "";
         private int active_word_length;
-        char[] correct_array = new char[10]; // array starts at arbitrary length, will be resized to match active word
+        public char[] correct_array = new char[10]; // array starts at arbitrary length, will be resized to match active word
         char[] active_word_array = new char[10];
         private char guess;
         public bool correct_wrong;
