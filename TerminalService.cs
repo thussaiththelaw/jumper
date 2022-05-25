@@ -28,7 +28,7 @@ namespace terminal
         }
 
         //tells the user that their guess was correct and prints the current state of the word
-        public void display_correct_guesses(string correct_array_string)
+        public void display_correct_guesses(char[] correct_array_string)
         {
             Console.WriteLine($"Correct guess! so far you have: {correct_array_string}");
         }
