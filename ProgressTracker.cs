@@ -2,8 +2,6 @@ namespace tracker{
     class ProgressTracker{
 
         //attributes
-        private bool won = false;
-        private bool lost = false;
         public int FailCount = 0;
 
 
@@ -13,13 +11,14 @@ namespace tracker{
 
 
 
-        public bool CheckIfWon(){
-            // char my_thing = word.WordManager.
-            // if ('_' !in my_thing){
-            //won == True;
-            //UpdateDisplay(something about calling the image handling probably)
+        public bool CheckIfWon(char[] current_word){
 
-            // } 
+            for (int i; i <= lengthof(current_word); i++){
+
+                if (current_word[i] == '_'){
+                    return false;
+                }
+            }
             return true;
         }
 
