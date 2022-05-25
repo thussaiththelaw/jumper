@@ -13,7 +13,7 @@ namespace tracker{
 
         public bool CheckIfWon(char[] current_word){
 
-            for (int i; i < lengthof(current_word); i++){
+            for (int i = 0; i < current_word.Length; i++){
 
                 if (current_word[i] == '_'){
                     return false;
