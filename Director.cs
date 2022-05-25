@@ -22,12 +22,11 @@ namespace jumper{
         }
 
         private void Initial(){
-            // terminal.TerminalService terminal = new terminal.TerminalService();
-            // word.WordManager WordManager = new word.WordManager(difficulty);
-            // tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
+            terminal.TerminalService terminal = new terminal.TerminalService();
+            int difficulty = terminal.difficulty()
+            word.WordManager WordManager = new word.WordManager(difficulty);
+            tracker.ProgressTracker PrograssTracker = new tracker.ProgressTracker();
             
-
-            int difficulty = terminal.difficulty();
 
             //get difficulty
             //construct WM, PT, TS
