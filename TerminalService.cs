@@ -45,5 +45,10 @@ namespace terminal
             Console.WriteLine("You lose! Don't do a big dumb next time");
         }
 
+        public void print(string words)
+        {
+            Console.WriteLine(words);
+        }
+
     }
 }
