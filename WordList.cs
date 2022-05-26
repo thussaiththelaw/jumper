@@ -25,11 +25,11 @@ namespace word
         public string getWord(int UpdateDiff=0)
         {
 
-            if (UpdateDiff==1)// UpdateDiff = 1 is difficulty level 2
+            if (UpdateDiff==2)// UpdateDiff = 1 is difficulty level 2
             {
                 this.difficulty = "DifficultyTwo";//These are the names of the tokens in the WordList.Json file
             }
-            else if (UpdateDiff==2)//updateDiff = 2 is difficulty level 3
+            else if (UpdateDiff==3)//updateDiff = 2 is difficulty level 3
             {
                 this.difficulty = "DifficultyThree";
             }
@@ -49,7 +49,7 @@ namespace word
                 var word = doc.SelectToken(this.difficulty).Value<JArray>()[RandomLocation];//Selecting the token of the json to be called then turns it into a JArray. We then use our random location to pull out a word.
                 // the var prefix sets the input to what ever type we need.
                 
-
+                Console.WriteLine(word);
                 return word.ToString();// converts the var word into a string and then returns it.  
             }
         }
