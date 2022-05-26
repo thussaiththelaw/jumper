@@ -39,7 +39,7 @@ namespace terminal
         //tells the user that their guess was incorrect
         public void print_wrong_guesses(string incorrect_guesses)
         {
-            Console.WriteLine($"{incorrect_guesses} is not in the word.");
+            Console.WriteLine($"{incorrect_guesses}");
         }
 
         //tells the user that their guess was correct and prints the current state of the word
