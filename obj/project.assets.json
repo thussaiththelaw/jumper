@@ -48,19 +48,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tjleg\\.nuget\\packages\\": {}
+    "C:\\Users\\zakla\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj",
+      "projectUniqueName": "C:\\Users\\zakla\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210\\Week 6\\jumper\\jumper.csproj",
       "projectName": "jumper",
-      "projectPath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\jumper.csproj",
-      "packagesPath": "C:\\Users\\tjleg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tjleg\\Desktop\\CSE210\\Week5\\Team Project\\jumper\\obj\\",
+      "projectPath": "C:\\Users\\zakla\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210\\Week 6\\jumper\\jumper.csproj",
+      "packagesPath": "C:\\Users\\zakla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zakla\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210\\Week 6\\jumper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tjleg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\zakla\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -104,7 +104,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
