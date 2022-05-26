@@ -1,7 +1,9 @@
 namespace jumper{
 
+    //Contains main game loop and 3 of the subclasses. 
     class Director{
 
+        //Attributes
         private bool playing = true;
         public char guess;
         terminal.TerminalService terminal;
@@ -11,9 +13,9 @@ namespace jumper{
         bool lost = false;
 
 
-        public Director(){}
+        public Director(){} //Constructor
 
-
+        //Contains main game loop - its what main calls
         public void StartGame(){
 
             Initial();
@@ -24,34 +26,23 @@ namespace jumper{
                 DoOutputs();                
             }
             terminal.print("Thanks for playing!");
-
         }
 
+        //Constructs subclasses and gets the difficulty from the user through terminalservice
         private void Initial(){
             this.terminal = new terminal.TerminalService();
             int difficulty = terminal.difficulty();
             this.WordManager = new word.WordManager(difficulty);
             //WordManager.
             this.ProgressTracker = new tracker.ProgressTracker();
-            
-
-            //get difficulty
-            //construct WM, PT, TS
-                //give difficulty to WM when constructing
-
-                //WM will construct Word list
-                //TS will construct pics
-            
-
-
         }
+
+        //takes input from the player
         private void GetInputs(){
         this.guess = terminal.guess();
-        //guess - TS
-        //
-
         }
 
+        //Compares the guess and updates the appropriate variables
         private void DoUpdates(char guess){
             WordManager.Compare(guess);
             bool right_or_wrong = WordManager.correct_wrong;
@@ -67,14 +58,9 @@ namespace jumper{
             if (this.won || this.lost){
                 this.playing = false;
             }
-
-            //compare (is good or not)- WM
-            //right or wrong -> update fail counter - PT
-            //correct array - WM > PT
-            //check win/loss - PT
-            //
         }  
 
+        //Prints current state of the game for the user
         private void DoOutputs(){
             terminal.display_correct_guesses(WordManager.correct_array);
             terminal.print_wrong_guesses(WordManager.incorrect_guesses);
@@ -85,16 +71,6 @@ namespace jumper{
             else if (this.lost){
                 terminal.print_lose();
             }
-            else{
-                //print current
-
-            }
-            //correct array - WM -> TS
-            //incorrect guesses - WM -> TS
-            //win/loss - TS (if its happened)
-            //wrong/right - TS
         }
-
-
     }
 }
