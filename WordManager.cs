@@ -75,7 +75,7 @@ namespace word
             {
                 active_word_array[i] = word_to_guess[i/2];
             }
-            Console.WriteLine(active_word_array);
+            
         }
         public void init_correct_array() // initializes the correct guess array to match the length of the active word
         {
@@ -88,7 +88,6 @@ namespace word
             {
                 correct_array[i] = ' ';
             }
-            Console.WriteLine(correct_array);
     }
 }
 }
