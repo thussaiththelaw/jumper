@@ -8,9 +8,23 @@ namespace terminal
         //get an input from the user to set the difficulty level for the game
         public int difficulty()
         {
-            Console.WriteLine("What difficulty would you like to play? (1,2,3): ");
-            int difficulty = int.Parse(Console.ReadLine());
-            return difficulty;
+            do{
+                Console.WriteLine("Please select a difficulty level: ");
+                Console.WriteLine("1. Easy");
+                Console.WriteLine("2. Medium");
+                Console.WriteLine("3. Hard");
+                string input = Console.ReadLine();
+                int difficulty = Convert.ToInt32(input);
+                if (difficulty < 1 || difficulty > 3)
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                }
+                else
+                {
+                    return difficulty;
+                }
+            } while (true);
+            }
         }
 
         //gets the guess from the user and return it to the director class
