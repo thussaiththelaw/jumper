@@ -61,6 +61,7 @@ namespace terminal
             Console.WriteLine("You lose! Don't do a big dumb next time");
         }
 
+        //print the input to the terminal
         public void print(string words)
         {
             Console.WriteLine(words);
