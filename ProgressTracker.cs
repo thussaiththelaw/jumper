@@ -1,7 +1,8 @@
 namespace tracker{
-    class ProgressTracker{
+    class ProgressTracker{ //Tracks the win/loss progress of the game
 
-        //attributes
+
+        //keeps track of how many wrong guesses have occured
         public int FailCount = 0;
 
 
@@ -10,7 +11,7 @@ namespace tracker{
         public ProgressTracker(){} //Constructor
 
 
-
+        //Checks the current word char array for '_' to see if the word has been guessed
         public bool CheckIfWon(char[] current_word){
 
             for (int i = 0; i < current_word.Length; i++){
@@ -22,6 +23,7 @@ namespace tracker{
             return true;
         }
 
+        //references the failcounter to determine if player has lost
         public bool CheckIfLost(){
             if (FailCount >= 7){
                 return true;
@@ -31,12 +33,5 @@ namespace tracker{
             }
                        
         }
-
-
-
-
-        
-
-
     }
 }
