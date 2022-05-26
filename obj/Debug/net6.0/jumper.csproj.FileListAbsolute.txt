@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\bin\Debug\net6.0\jumper.exe
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\bin\Debug\net6.0\jumper.deps.json
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\bin\Debug\net6.0\jumper.runtimeconfig.json
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\bin\Debug\net6.0\jumper.dll
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\bin\Debug\net6.0\jumper.pdb
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.csproj.AssemblyReference.cache
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.AssemblyInfoInputs.cache
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.AssemblyInfo.cs
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.csproj.CoreCompileInputs.cache
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.csproj.CopyComplete
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.dll
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\refint\jumper.dll
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.pdb
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\jumper.genruntimeconfig.cache
+C:\Users\tjleg\Desktop\CSE210\Week5\Team Project\jumper\obj\Debug\net6.0\ref\jumper.dll
+=======
 C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\bin\Debug\net6.0\jumper.exe
 C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\bin\Debug\net6.0\jumper.deps.json
 C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\bin\Debug\net6.0\jumper.runtimeconfig.json
@@ -15,3 +34,4 @@ C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\obj\Debug\
 C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\obj\Debug\net6.0\jumper.pdb
 C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\obj\Debug\net6.0\jumper.genruntimeconfig.cache
 C:\Users\zakla\OneDrive - BYU-Idaho\Spring 2022\CSE 210\Week 6\jumper\obj\Debug\net6.0\ref\jumper.dll
+>>>>>>> 2d2d825952454aa7e3547f333529c83e960357bb
