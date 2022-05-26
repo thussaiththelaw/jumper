@@ -9,6 +9,7 @@ namespace jumper{
         terminal.TerminalService terminal;
         word.WordManager WordManager;
         tracker.ProgressTracker ProgressTracker;
+        terminal.ASKEYImage images;
         bool won = false;
         bool lost = false;
 
@@ -35,6 +36,7 @@ namespace jumper{
             this.WordManager = new word.WordManager(difficulty);
             //WordManager.
             this.ProgressTracker = new tracker.ProgressTracker();
+            this.images = new terminal.ASKEYImage();
         }
 
         //takes input from the player
@@ -58,10 +60,22 @@ namespace jumper{
             if (this.won || this.lost){
                 this.playing = false;
             }
+
+            if (this.won){
+                images.counter = 7;
+            }
+            else if (this.lost){
+                images.counter = 8;
+            }
+            else{
+                images.counter = ProgressTracker.FailCount;
+            }
+
         }  
 
         //Prints current state of the game for the user
         private void DoOutputs(){
+            images.JsonASKEY();
             terminal.display_correct_guesses(WordManager.correct_array);
             terminal.print_wrong_guesses(WordManager.incorrect_guesses);
 

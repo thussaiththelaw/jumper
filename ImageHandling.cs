@@ -6,7 +6,9 @@ namespace terminal
         class ASKEYImage
         {
             public int counter = 0;
-                private string count = "image_1"; 
+            private string count = "image_1"; 
+
+            public ASKEYImage(){}
                     public void JsonASKEY()
                     {
                         
