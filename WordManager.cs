@@ -25,8 +25,7 @@ namespace word
 
         WordList active_word = new WordList(); // instantiates word list object
        
-        //word_to_guess = active_word.getWord();
-        //active_word_length = word_to_guess.Length();
+        
 
         public WordManager(int difficulty)
         {
