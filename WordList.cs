@@ -50,7 +50,7 @@ namespace word
                 // the var prefix sets the input to what ever type we need.
                 
                 Console.WriteLine(word);
-                return word.ToString().ToLower;// converts the var word into a string and then returns it.  
+                return word.ToString().ToLower();// converts the var word into a string and then returns it.  
             }
         }
     }
