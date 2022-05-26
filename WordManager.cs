@@ -25,8 +25,7 @@ namespace word
 
         WordList active_word = new WordList(); // instantiates word list object
        
-        //word_to_guess = active_word.getWord();
-        //active_word_length = word_to_guess.Length();
+        
 
         public WordManager(int difficulty)
         {
@@ -34,9 +33,12 @@ namespace word
             word_to_guess = active_word.getWord(this.difficulty);
             active_word_length = word_to_guess.Length;
         } // constructor
+       
         public void Compare(char guess) // compares letter guesses to already guessed letters, and adds the correct letter to each spot that the letter exists,
         // or concantinates the letter to the incorrect guesses string
         {
+            init_active_word_array();
+            init_correct_array();
             this.guess = guess;
             if(!all_guesses.Contains(this.guess)) // && (!correct_array_string.Contains(this.guess))
             {                

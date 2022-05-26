@@ -32,6 +32,7 @@ namespace terminal
         {
             Console.WriteLine("Guess a letter: ");
             char guess = char.Parse(Console.ReadLine());
+            guess = char.ToLower(guess);
             return guess;
         }
 
