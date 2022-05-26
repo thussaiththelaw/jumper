@@ -9,7 +9,7 @@ namespace terminal
         public int difficulty()
         {
             do{
-                Console.WriteLine("Please select a difficulty level: ");
+                Console.WriteLine("Please select a difficulty level (type only the number): ");
                 Console.WriteLine("1. Easy");
                 Console.WriteLine("2. Medium");
                 Console.WriteLine("3. Hard");
@@ -24,8 +24,8 @@ namespace terminal
                     return difficulty;
                 }
             } while (true);
-            }
         }
+        
 
         //gets the guess from the user and return it to the director class
         public char guess()
@@ -63,5 +63,5 @@ namespace terminal
         {
             Console.WriteLine(words);
         }
-        
+    }   
 }
