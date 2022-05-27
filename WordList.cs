@@ -49,7 +49,7 @@ namespace word
                 var word = doc.SelectToken(this.difficulty).Value<JArray>()[RandomLocation];//Selecting the token of the json to be called then turns it into a JArray. We then use our random location to pull out a word.
                 // the var prefix sets the input to what ever type we need.
                 
-                Console.WriteLine(word);
+
                 return word.ToString().ToLower();// converts the var word into a string and then returns it.  
             }
         }
